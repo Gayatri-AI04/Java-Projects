@@ -89,9 +89,11 @@ public class BankOfMaharashtra implements CentralBank {
 		double amount = sc.nextDouble();
 		if(amount >0) { 
 		
+			
+		
 		if(amount < ac.getBalance()) {
 			double balance = ac.getBalance();
-//			System.out.println("Remaning amount = "+(balance - amount));
+
 			double finalamt = (balance - amount);
 			ac.setBalance(finalamt);
 			System.out.println("....Money Withdrowl Successfull....");
@@ -99,6 +101,8 @@ public class BankOfMaharashtra implements CentralBank {
 		}else {
 			System.out.println("Insufficient Balance");
 		}
+		}else {
+			System.out.println("Invalid amount entered...please enter again");
 		}
 		}else {
 			System.out.println("Please create your Account First...");
@@ -116,7 +120,7 @@ public class BankOfMaharashtra implements CentralBank {
 		System.out.println("Enter the Money to deposite");
 		double amount = sc.nextDouble();
 		double balance = ac.getBalance();
-		if(balance > 0) {
+		if(amount > 0) {
 			double totalAmt = balance+amount;
 			System.out.println("Total Amount = "+ totalAmt);
 		}else {
